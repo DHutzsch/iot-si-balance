@@ -6,6 +6,8 @@ The balance has a load-cell to measure the value of weight by putting the weight
 
 The left button on the device allows to execute one measurement. It is triggert by short press of the button. The LED on the button will be on when measuring and the display will say "Meas.". 
 
+![Default Measure](figures/03-default.JPG){height=180px}![Default Measure](figures/05-display-default.JPG){height=180px}
+
 **Tara of the balance**
 
 This function is for setting the displayed mass value to zero which is called tara. This function is typically used to eliminate the weight of bowls or similar that are put on the balance to hold the actual substance that is measured. It also used to set the zero point when starting up the balance. To rund tara, hold the left button pressed for several seconds. The LED on the button will blink, when tara is activated and the display will show "tara".
@@ -14,10 +16,14 @@ This function is for setting the displayed mass value to zero which is called ta
 
 The balance provides metadata on the expanded measurement uncertainty associated to its sensors. Press the right button for a short time and the display will show this information. To close the uncertainty information, press the right button again.
 
+![Uncertainty](figures/04-measurement-uncertainty.JPG){height=180px}!
+
 **Run an adjustment of the measurement value**
 
 A simple software based adjustment of the mass measurement values is implemented. This will adjust the mass values to a known reference weight. To use this function properly, you need a reference weight piece with knowl mass value. E.g., I uses littel solid objects that were measured with a kitchen balance to obtain a reference value. 
 You can activate the adjustment function by holding the right button pressed for a few seconds. At this time, no weights should be put on the tray of the load-cell. The display will show a page that asks you to enter the reference mass value. The value is added by turning the poti between the buttons. The software supports a range between 0 and 2 kg (range of the load-cell). When you have set the right value, press the right button again. now you are asked to put the reference weight piece on the load-cell and confirm by pressing the right button again. After this step, the balance is making 5 measurements of the reference and it calculates the arithmetic mean of the values. Then, the mass value is adjusted to the mean value and the adjustment is completed. After the adjustment, you need to remove the reference weight piece and run the tara function to get correct measurements. 
+
+![Adjsutment](figures/06-display-adjustment-set-weight.JPG){height=170px}![Adjsutment](figures/07-display-adjustment-put-weight-on-balance.JPG){height=170px}![Adjsutment](figures/08-display-rund-adjustment-measures.JPG){height=170px}
 
 ## Hardware
 
