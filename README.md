@@ -18,8 +18,12 @@ On some READMEs, you may see small images that convey metadata, such as whether 
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
-Arduino IDE 2.3.2 with Arduino Mbed OS RP2040 Boards version 4.1.4, DHT sensor library by Adafruit version 1.4.6, 
-HX711 Arduino library by Bogdan Necula version 0.7.5.
+Arduino IDE 2.3.2 by Arduino with libraries
+- Arduino Mbed OS RP2040 Boards version 4.1.4, 
+- DHT sensor library by Adafruit version 1.4.6, 
+- HX711 Arduino library by Bogdan Necula version 0.7.5.,
+- TFT_eSPI by Bodmer version 2.5.43
+- default SPI of Arduino BusIO by Adafruit version 1.16.1
 
 ## Usage
 Please, refer to the Wiki.
@@ -28,11 +32,11 @@ Please, refer to the Wiki.
 Documentation in this Git project and in the source code is the only available support.
 
 ## Roadmap
-[] Initial hardware and software prototype setup
-[] manufacturing table top device
-[] Git publication of first release
-[] Serial interface: add measurement data exchange and external trigger functions for measurement, tara, adjustment, and uncertainties
-[] Core software: add measurment model including air temperature and air humidity adjustment and calibration point adjustments 
+[x] Initial hardware and software prototype setup
+[x] manufacturing table top device
+[x] Git publication of first release
+[ ] Serial interface: add measurement data exchange and external trigger functions for measurement, tara, adjustment, and uncertainties
+[ ] Core software: add measurment model including air temperature and air humidity adjustment and calibration point adjustments 
 
 ## Contributing
 You are welcome to make suggestions for improvements and additions. Please, also feel free to work with your own copy 

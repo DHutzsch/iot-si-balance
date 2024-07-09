@@ -17,64 +17,51 @@
   * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
   * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
   * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
-  **/
+  */
 
-/**
- * Make one mass measurement
- */
-void checkButton1()
+void debugMessage(const String message)
 {
-  // Button gedrückt
-  if (digitalRead(button1Pin) == LOW)
+  if (DEBUG)
   {
-    digitalWrite(LED1Pin, HIGH);
-    Serial.print("[Button 1] "); 
-    readLoadCell();
-    readTempHumi();
-    plotDataDebug();
-    delay(1000);
-    digitalWrite(LED1Pin, LOW);
+    Serial.print("[DEBUG] ");
+    Serial.println(message);
   }
 }
 
-/**
- * Calibrate load cell
- */
-void checkButton2()
+void debugTHData()
 {
-  // Button gedrückt
-  if (digitalRead(button2Pin) == LOW)
+   if (DEBUG)
   {
-    toogleLED2();
-    Serial.print("[Button 2] ");
-
-    loadcell.set_scale();
-    loadcell.tare();
-    Serial.println("Calibration");
-    Serial.println("Put a known weight on the scale");
-    
-    for (int i = 0 ; i < 10 ; i++)
+    if (isnan(humValue) || isnan(tempValue)) 
     {
-      toogleLED2();
-      delay(500);
+      Serial.println(F("ERROR: Failed reading temperature and humidity, value is NaN."));
     }
-    
-    float x = loadcell.get_units(10);
-    x = x / Calibration_Weight;
-    //Serial.print("Scale... ");  //Serial.println(x);    // -1108.57, -1108.27,  -1108.52, -1107.72, -1108.52
-    loadcell.set_scale(x);
-    Serial.println("Calibration finished...");
-    delay(500);
-  
-    led2State = LOW;
-    digitalWrite(LED2Pin, led2State);
+    else
+    {
+      Serial.print("Humidity: ");
+      Serial.print(humValue);
+      Serial.print(" %, ");
+
+      Serial.print("Temperature: ");
+      Serial.print(tempValue);
+      Serial.println(" °C");
+    } 
   }
 }
 
-void toogleLED2()
+void debugLoadCellData()
 {
-  led2State = !led2State;
-  digitalWrite(LED2Pin, led2State);
+   if (DEBUG)
+  {
+    if (isnan(massValue)) 
+    {
+      Serial.println(F("ERROR: Failed reading mass, value is NaN."));
+    }
+    else
+    {
+      Serial.print("Mass: ");
+      Serial.print(massValue);
+      Serial.print(" kg, ");
+    } 
+  }
 }
-
-
