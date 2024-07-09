@@ -10,4 +10,4 @@ The balance has been build with the following IoT components:
 
 **Pinout of the Pico WH and connection of components**
 
-![alt text1](https://gitlab.com/iot-devices-various/iot-si-balance/-/blob/main/figures/12-pico-pin-layout.PNG "lorem ipsum")
+![figure of Pico EH pin layout](figures/12-pico-pin-layout.PNG)
