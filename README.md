@@ -1,5 +1,3 @@
-# IoT SI Scale
-
 ## Name
 IoT SI Balance
 
