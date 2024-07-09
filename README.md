@@ -1,21 +1,16 @@
 # IoT SI Scale
 
-
-
-
-
-
 ## Name
-Choose a self-explaining name for your project.
+IoT SI Balance
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+This projects describes the setup of a low-budget IoT balance for weighing. Its software is implemented on a Raspberry PI Pico 
+microcontroller. The scope of available functions includes measurement, tara, adjustment and uncertainty display for mass measurements 
+made using a load-cell. In addition, a serial interface allows data exchange with a computer enabling automation of the usage of the 
+device, e.g., for a combination with a Digital Twin. Data exchange is based on the D-SI metadata model.
 
 ## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+
 
 ## Installation
 Arduino IDE 2.3.2 by Arduino with libraries
