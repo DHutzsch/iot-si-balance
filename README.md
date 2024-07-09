@@ -28,11 +28,12 @@ Please, refer to the Wiki.
 Documentation in this Git project and in the source code is the only available support.
 
 ## Roadmap
-[x] Initial hardware and software prototype setup
-[x] manufacturing table top device
-[x] Git publication of first release
-[ ] Serial interface: add measurement data exchange and external trigger functions for measurement, tara, adjustment, and uncertainties
-[ ] Core software: add measurment model including air temperature and air humidity adjustment and calibration point adjustments 
+
+- [x] Initial hardware and software prototype setup
+- [x] manufacturing table top device
+- [x] Git publication of first release
+- [ ] Serial interface: add measurement data exchange and external trigger functions for measurement, tara, adjustment, and uncertainties
+- [ ] Core software: add measurment model including air temperature and air humidity adjustment and calibration point adjustments 
 
 ## Contributing
 You are welcome to make suggestions for improvements and additions. Please, also feel free to work with your own copy 
