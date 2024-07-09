@@ -66,11 +66,11 @@ The display has a SPI based connection, the load cell has a kind of I2C like con
 
 The software was developped and uploaded with the Arduino IDE 2.3.2 by Arduino using the following libraries:
 
-Arduino Mbed OS RP2040 Boards version 4.1.4,
-DHT sensor library by Adafruit version 1.4.6,
-HX711 Arduino library by Bogdan Necula version 0.7.5.,
-TFT_eSPI by Bodmer version 2.5.43
-default SPI of Arduino BusIO by Adafruit version 1.16.1
+- Arduino Mbed OS RP2040 Boards version 4.1.4,
+- DHT sensor library by Adafruit version 1.4.6,
+- HX711 Arduino library by Bogdan Necula version 0.7.5.,
+- TFT_eSPI by Bodmer version 2.5.43
+- default SPI of Arduino BusIO by Adafruit version 1.16.1
 
 The main code file is iot-si-balance.ino. The loop function implements a finite automate with different behaviour based on the function status (Measurement, Uncertainty, Adjustment 1&2). But basically, it is running updates of the display and checking inputs from the buttons. There is also a flag to set DEBUG mode that provide more data through the serial port. 
 
