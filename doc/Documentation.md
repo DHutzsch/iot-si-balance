@@ -1,3 +1,24 @@
+## Basic Operation Instruction
+
+The balance has a load-cell to measure the value of weight by putting the weights on the little tray on top of the load cell (HX711 load-cell). The measured values and current values of loads on the tray are shown on the gauge on a LCD display. Also the values of air temperature and humidity close to the load-cell are displayed (values from DHT 22 sensor). 
+
+**Single measurement**
+
+The left button on the device allows to execute one measurement. It is triggert by short press of the button. The LED on the button will be on when measuring and the display will say "Meas.". 
+
+**Tara of the balance**
+
+This function is for setting the displayed mass value to zero which is called tara. This function is typically used to eliminate the weight of bowls or similar that are put on the balance to hold the actual substance that is measured. It also used to set the zero point when starting up the balance. To rund tara, hold the left button pressed for several seconds. The LED on the button will blink, when tara is activated and the display will show "tara".
+
+**Display measurement uncertainty**
+
+The balance provides metadata on the expanded measurement uncertainty associated to its sensors. Press the right button for a short time and the display will show this information. To close the uncertainty information, press the right button again.
+
+**Run an adjustment of the measurement value**
+
+A simple software based adjustment of the mass measurement values is implemented. This will adjust the mass values to a known reference weight. To use this function properly, you need a reference weight piece with knowl mass value. E.g., I uses littel solid objects that were measured with a kitchen balance to obtain a reference value. 
+You can activate the adjustment function by holding the right button pressed for a few seconds. At this time, no weights should be put on the tray of the load-cell. The display will show a page that asks you to enter the reference mass value. The value is added by turning the poti between the buttons. The software supports a range between 0 and 2 kg (range of the load-cell). When you have set the right value, press the right button again. now you are asked to put the reference weight piece on the load-cell and confirm by pressing the right button again. After this step, the balance is making 5 measurements of the reference and it calculates the arithmetic mean of the values. Then, the mass value is adjusted to the mean value and the adjustment is completed. After the adjustment, you need to remove the reference weight piece and run the tara function to get correct measurements. 
+
 ## Hardware
 
 The balance has been build with the following IoT components:
