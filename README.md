@@ -20,7 +20,7 @@ Arduino IDE 2.3.2 by Arduino with libraries
 - default SPI of Arduino BusIO by Adafruit version 1.16.1
 
 ## Usage
-Please, refer to the Wiki.
+Please, refer to the documentation [Link >>](doc/Documentation.md).
 
 ## Support
 Documentation in this Git project and in the source code is the only available support.
