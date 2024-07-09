@@ -35,6 +35,12 @@ The balance has been build with the following IoT components:
 - DEBO MP 1584EN DCDC step-down power converter (suitable for converting 5 V into 3.3 V)
 - 2 LEDs, 2 Buttons, 5 kOhm poti, some prototyping board
 
+The device is powered by 5 Volt Micro USB input of the Pico WH microcontroller. Through the VBUS pin, the input voltage is provided to the DCDC power converter reducing it to 3.2 Volt. This voltage drop is needed to operate alls sensors and buttons in the range of 3.3 Volt maximum input to the PICO WH GPIOs. In a more simple case, it would have been sufficient to use the 3.3 Volt output of the Pico WH directly, but as we have also installed a display and several LEDs, the dedicated step-down converter is a better solution.
+
+The left button and LED are associated with button 1 and LED 1. The right button and LED respectively have number 2.
+
+The display has a SPI based connection, the load cell has a kind of I2C like connection, and the DHT 22 sensor has a simple digital protocol on a digital GPIO pin.
+
 **Pinout of the Pico WH and connection of components**
 
 ![figure of Pico WH pin layout](figures/12-pico-pin-layout.PNG){height=300px}
@@ -54,3 +60,30 @@ The balance has been build with the following IoT components:
 **Figure of the display and control**
 
 ![electronics setup](figures/05-display-default.JPG){height=300px}
+
+
+## software
+
+The software was developped and uploaded with the Arduino IDE 2.3.2 by Arduino using the following libraries:
+
+Arduino Mbed OS RP2040 Boards version 4.1.4,
+DHT sensor library by Adafruit version 1.4.6,
+HX711 Arduino library by Bogdan Necula version 0.7.5.,
+TFT_eSPI by Bodmer version 2.5.43
+default SPI of Arduino BusIO by Adafruit version 1.16.1
+
+The main code file is iot-si-balance.ino. The loop function implements a finite automate with different behaviour based on the function status (Measurement, Uncertainty, Adjustment 1&2). But basically, it is running updates of the display and checking inputs from the buttons. There is also a flag to set DEBUG mode that provide more data through the serial port. 
+
+The serial port is running on 9600 baude.
+
+All setup is outsourced in the setup.ino file.
+
+Methods handling the events when pressing buttons are implemented in the handle.ino.
+
+In sensors.ino, interfaces are implemented to read the data from the load cell and DHT 22.
+
+The whole visual display of data on the LCD is provided by methods from display.ino.
+
+Finally (implementation still a TODO), the serial.ino will provide methods for the serial exchane of data and medata with a computer and physics.ino will in future provide more suffisticated methods to evaluate the measurands and their measurement uncertainties.
+
+
