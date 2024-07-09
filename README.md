@@ -11,6 +11,7 @@ device, e.g., for a combination with a Digital Twin. Data exchange is based on t
 
 ## Visuals
 
+![Balance Device](figures/01-main-figure.JPG)
 
 ## Installation
 Arduino IDE 2.3.2 by Arduino with libraries
